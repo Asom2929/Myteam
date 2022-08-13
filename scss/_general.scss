@@ -1,0 +1,38 @@
+/* GENERAL */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+li,
+a,
+button,
+input,
+textarea,
+select,
+option {
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background: none;
+    display: inline-block;
+
+}
+body{
+    background: #014E56 !important;
+    font-family: 'Livvic', sans-serif;
+   
+    }
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+}

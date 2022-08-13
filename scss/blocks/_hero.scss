@@ -1,0 +1,156 @@
+.hero {
+    padding-top: 120px;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        background-image: url("/img/heroimg1.png");
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0px;
+        top: 115px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        background-image: url("/img/heroimg2.png");
+        background-repeat: no-repeat;
+        width: 360px;
+        height: 200px;
+        position: absolute;
+        right: 410px;
+        bottom: -310px;
+    }
+}
+
+.hero__about {
+    padding-top: 120px;
+    margin-bottom: 120px;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        background-image: url("/img/abouthero-back.png");
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 400px;
+        position: absolute;
+        right: -100px;
+        bottom: -320px;
+    }
+}
+
+.hero__body {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.hero__title {
+    @include title-large;
+    max-width: 610px;
+}
+
+.about__hero__title {
+    @include title-large;
+}
+
+.hero__title-span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100px;
+    color: #F67E7E;
+}
+
+.hero__text {
+    @include text-large;
+    max-width: 440px;
+    padding-top: 80px;
+    position: relative;
+
+    &::before {
+        @include before;
+
+    }
+}
+
+.about__hero__text {
+    @include text-large;
+    max-width: 710px;
+    padding-top: 40px;
+    position: relative;
+
+    &::before {
+        @include before;
+
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .hero__about {
+        &::after {
+            bottom: -370px;
+        }
+    }
+
+
+    .hero__body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .about__hero__text, .hero__text {
+        text-align: center;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            right: 50%;
+            transform: translateX(50%);
+        }
+
+        .hero__body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero__text {
+            font-size: 15px;
+            line-height: 28px;
+            margin: 0 auto;
+            max-width: 455px;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero__img-bottom {
+        left: -10px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,148 @@
+.contact {
+    padding-top: 120px;
+    padding-bottom: 130px;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        background-image: url("/img/contactbef.png");
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0px;
+        top: 125px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        background-image: url("/img/contactaft.png");
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 225px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+}
+
+.contact__body {
+    display: flex;
+    justify-content: space-between
+}
+
+.contact__title {
+    @include title-small;
+}
+
+.contact__text {
+    @include text-large;
+    color: #F67E7E;
+    padding-top: 25px;
+    padding-bottom: 35px;
+
+}
+
+.contact__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    margin-bottom: 10px;
+}
+
+.contact__item-subtext {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+}
+
+.contact__form-input {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.115385px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    border-bottom: 1px solid;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 5px;
+    &:hover{
+        border-bottom: 1px solid #F67E7E;
+        color: #F67E7E;
+        opacity: 1;
+    }
+    
+}
+
+.contact__form-link {
+    background: #004047;
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    padding: 10px 30px;
+    margin-top: 20px;
+    float: left;
+
+    &:hover {
+        background: #FFFFFF;
+        color: #004047;
+    }
+}
+
+@media screen and (max-width: 1500px){
+    .contact{
+        &::after{
+            right: -100px;
+            bottom: -20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .contact__body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__form{
+    max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .contact{
+        &::before{
+            display: none;
+        }
+
+        &::after{
+            right: -100px;
+            bottom: 0px;
+            height: 100px;
+        }
+    }
+}

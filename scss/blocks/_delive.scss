@@ -1,0 +1,119 @@
+.delive {
+    padding-top: 140px;
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        background-image: url('/img/deliveaft.png');
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+    &::after{
+        content: '';
+        display: block;
+        background-image: url('/img/delivebef.png');
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        bottom: -240px;
+    }
+}
+
+.delive__title {
+    @include title-small;
+    max-width: 930px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.delive__span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #79C8C7;
+}
+
+.delive__list {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delive__item{
+    background-image: url('/img/deliveback.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-top: 55px;
+    padding-top: 35px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.delive__item-text {
+    @include text-small;
+    max-width: 350px;
+    margin-bottom: 25px;
+    
+}
+
+.delive__box {
+    text-align: center;
+}
+
+.delive__box-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #79C8C7;
+}
+
+.delive__box-text {
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.delive__box-img {
+    width: 62px;
+    height: 62px;
+    &:hover{
+        transform: scale(1.2);
+        transition: all .4s ease-out;
+  
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .delive__title{
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 50px;
+        .delive__span{
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+
+    .delive__list{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .delive__box{
+        margin-bottom: 50px;
+    }
+}
